@@ -1,10 +1,14 @@
 export class Store {
-  circleSize = 100;
+  circle = new Circle();
+}
 
-  change() {
-    this.circleSize -= 10;
-    if (this.circleSize <= 0) {
-      this.circleSize = 100;
-    }
+export class Circle {
+  cx = 100;
+  cy = 100;
+  r = 100;
+
+  move(x: number, y: number) {
+    this.cx += x;
+    this.cy += y;
   }
 }
