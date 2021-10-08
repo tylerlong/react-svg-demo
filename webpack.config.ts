@@ -24,6 +24,9 @@ const config: Configuration = {
       title: 'React SVG Demo',
     }),
   ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
 };
 
 export default config;
