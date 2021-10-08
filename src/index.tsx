@@ -4,7 +4,18 @@ import React from 'react';
 
 class App extends Component {
   render() {
-    return <h1>Hello world!</h1>;
+    return (
+      <svg width="100%" height="800">
+        <circle
+          cx={100}
+          cy={100}
+          r={100}
+          fill="transparent"
+          stroke="black"
+          strokeWidth="1"
+        />
+      </svg>
+    );
   }
 }
 
