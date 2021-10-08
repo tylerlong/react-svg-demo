@@ -16,15 +16,11 @@ class App extends Component<{store: Store}> {
             cx={circle.cx}
             cy={circle.cy}
             r={circle.r}
-            fill="transparent"
+            fill="red"
             stroke="black"
             strokeWidth="1"
           />
         </svg>
-        <button onClick={() => circle.move(-10, 0)}>left</button>
-        <button onClick={() => circle.move(0, -10)}>up</button>
-        <button onClick={() => circle.move(10, 0)}>right</button>
-        <button onClick={() => circle.move(0, 10)}>down</button>
       </>
     );
   }

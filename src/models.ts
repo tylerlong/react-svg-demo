@@ -5,7 +5,7 @@ export class Store {
 export class Circle {
   cx = 100;
   cy = 100;
-  r = 100;
+  r = 10;
 
   move(x: number, y: number) {
     this.cx += x;
