@@ -11,7 +11,7 @@ class App extends Component<{store: Store}> {
     const {circle} = store;
     return (
       <>
-        <svg width="100%" height={400}>
+        <svg width="100%" height={400} key={circle.key}>
           <circle
             cx={circle.cx}
             cy={circle.cy}
@@ -19,7 +19,12 @@ class App extends Component<{store: Store}> {
             fill="red"
             stroke="black"
             strokeWidth="1"
-          />
+          >
+            <animateMotion
+              dur="100ms"
+              path={`M ${circle.animation.startX} ${circle.animation.startY} L ${circle.animation.endX} ${circle.animation.endY}`}
+            />
+          </circle>
         </svg>
       </>
     );

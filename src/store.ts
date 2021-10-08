@@ -10,7 +10,7 @@ const {circle} = store;
 
 document.addEventListener('keydown', e => {
   console.log('keydown');
-  const speed = 5;
+  const speed = 10;
   switch (e.key) {
     case 'ArrowLeft': {
       circle.move(-speed, 0);
