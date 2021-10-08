@@ -4,8 +4,20 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: Configuration = {
   mode: 'development',
+  devtool: 'source-map',
   entry: {
-    index: './src/index.ts',
+    index: './src/index.tsx',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
